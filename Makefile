@@ -1,4 +1,3 @@
-
 build: ## Build image for development
 	docker build -t blog .
 
