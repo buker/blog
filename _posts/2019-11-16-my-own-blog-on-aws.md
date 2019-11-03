@@ -28,8 +28,21 @@ Proces instalacji będzie opisany dla Ubuntu, ponieważ aktualnie takiego używa
 
 ### Zakładanie konta AWS
 
-Nie chce tutaj opisywać całego procesu zakładania konta w chmurze AWS. Jest to bardzo szybki proces bez żadnych niespodzianek. Jedynie trzeba podpiąć kartę płatnicza do swojego konta co może być dla niektórych problematyczne. Polecam użycie karty prepaid np: [Revolute](https://revolut.com/referral/ukaszk0y!a13221) 
+Nie chce tutaj opisywać całego procesu zakładania konta w chmurze AWS. Jest to bardzo szybki proces, bez żadnych niespodzianek. Jedynie trzeba podpiąć kartę płatnicza do swojego konta co może być dla niektórych problematyczne. Polecam użycie karty prepaid np: [Revolute](https://revolut.com/referral/ukaszk0y!a13221) . AWS daje każdemu użytkownikowi pakiet [Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsm.page-all-free-tier=1). Niektóre usługi są w pewnym stopniu za darmo przez pierwszy rok, a niektóre są w ograniczonym stopniu za darmo. W następnych artykułach opisze stawianie takiej samej usługi u innego dostawcy chmury, żebyś miał porównanie jak to wygląda u innych.
 
 ## Hosting
 
+Żeby ktoś zobaczył twoją stronę, to musimy wystawić ją na jakimś serwerze, który jest podpięty do sieci. Jest jeszcze jedna możliwość, ale tyczy się ona tylko stron opartych na plikach statycznych jak blog, który właśnie czytasz.
+Rozwiązaniem jest object storage. W przypadku AWS jest to S3. Usługa ta daje możliwośc wystawienie całego bucketu za webserverem
+
+Usługi które wykorzystamy:
+* S3
+* CloudFront
+* Certificate Manager
+* Route 53
+
 ## Kod źródłowy
+
+Infrastruktura jest stworzona za pomocą terraforma. Moduł jest dostępny na [GitHub](https://github.com/buker/blog-terraform-aws). Jest to moduł który tworzy wszystkie niezbędne obiekty w chmurze AWS. Jedynie trzeba wypełnić zmienne, które przyjmuje moduł na odpowienie dla nas. 
+
+Przykład działającego rozwiązania znajduje się w specjalnie do tego celu przygotowanym [repozytorium](https://github.com/buker/blog-example)
