@@ -11,7 +11,8 @@ summary: Informacja o powrocie do blogowania.
 series: [Info]
 ---
 
-Po ponad roku przerwy w blogowaniu spowodowanej brakiem czasu postanowiłem wrócić z nowymi pomysłami. Blog będzie podzielony na serie związane z róznymi tematami. Mam zamiar poruszyć tematy takie jak:
+Po ponad roku przerwy w blogowaniu spowodowanej brakiem czasu postanowiłem wrócić z nowymi pomysłami, motywacją i chęciami. Blog będzie podzielony na serie związane z róznymi tematami. Mam zamiar poruszyć tematy takie jak:
+
 * Certyfikacja - Przygotowanie i zdanie egzaminu.
 * Cloud - GCP, AWS, Azure i praktyczne ich zastosowanie.
 * Kubernetes - jak używać, jego możliwości.
@@ -22,8 +23,8 @@ Po ponad roku przerwy w blogowaniu spowodowanej brakiem czasu postanowiłem wró
 * Info - Informacyje, ustalenia zajawki.
 * Wywiad - Relacja z wywiadu i transkrypt
 
+Jeśli jesteś osobą, która by chciała się podzielić swoimi doświadczeniami ze świata IT, proszę o kontaktu. Może uda nam się wspólnymi siłami opowiedzieć twoją historię.
 
-Zachęcam też do zapisania się w Newsleterze. Mam nadzieje że on usprawni mi kontakt z Wami. Będzie on tylko wykorzystywany do informowania o nowych artykułach ale także mogą się zdarzyć prośby o wyrażenie swojej opini. 
+Zachęcam też do zapisania się w Newsleterze. Mam nadzieje że użycie tego narzędzia usprawni mi kontakt z Tobą. Newsleter będzie używany tylko do celów komunikacyjnych związanych z nowymi treściami na stronie. Sporadycznie mogę za pomocą tego nośnika zadać pytanie związane z stroną.
 
-
-Mam nadzieje że zmiany w formie portalu pomogą w odnalezieniu ciekawych dla Was informacji. Życzę udanej lektury :)
+Mam nadzieje że zmiany pomogą w odnalezieniu ciekawych dla Ciebie informacji. Życzę udanej lektury :)
