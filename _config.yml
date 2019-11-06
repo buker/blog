@@ -10,7 +10,7 @@ url: "https://me.zulnowski.com"
 # Name of website
 title: DevOps / SysOps
 
-description: Strona domowa Łukasz Żułnowskiego
+description: Strona domowa Łukasza Żułnowskiego. Artykuły o tematyce DevOps, SysOps, automatyzacja procesów, cloud, Kubernetes.
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -66,6 +66,11 @@ footer-link-col: "#404040"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Łukasz Żułnowski
+  email: "lukasz@zulnowski"
+  facebook: lzulnowski
+  github: buker
+  twitter: lzulnowski
+  
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -204,6 +209,7 @@ exclude:
   - README.md
   - Vagrantfile
   - Dockerfile
+  - Makefile
 
 # prose.io config
 prose:
@@ -219,6 +225,7 @@ prose:
     - /css
     - /img
     - /js
+
   metadata:
     _posts:
       - name: "layout"
@@ -264,4 +271,4 @@ plugins:
   - jekyll-minifier
 
 jekyll-minifier:
-  exclude: ['atom.xml', 'feed.xml', 'tags.xml']
+  exclude: ['atom.xml', 'feed.xml', 'tags.xml', 'LICENSE', 'README.md', 'CHANGELOG.md']
