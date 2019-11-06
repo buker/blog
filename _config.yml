@@ -271,4 +271,6 @@ plugins:
   - jekyll-minifier
 
 jekyll-minifier:
-  exclude: ['atom.xml', 'feed.xml', 'tags.xml', 'LICENSE', 'README.md', 'CHANGELOG.md']
+  uglifier_args:
+    harmony: true
+  exclude: ['atom.xml', 'feed.xml', 'tags.xml']
