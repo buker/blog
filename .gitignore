@@ -1,8 +1,6 @@
 # project
 _site
 .sass-cache
-.vagrant
-
 # general
 .DS_Store
 Thumbs.db

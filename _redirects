@@ -1,0 +1,13 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect domain aliases to primary domain
+https://blog.zulnowski.com/* https://me.zulnowski.com/:splat 301!
+https://lz.zulnowski.com/* https://me.zulnowski.com/:splat 301!
+https://lukasz.zulnowski.com/* https://me.zulnowski.com/:splat 301!
+https://www.me.zulnowski.com/* https://me.zulnowski.com/:splat 301!
+https://zulnowski.com/* https://me.zulnowski.com/:splat 301!
+https://www.zulnowski.com/* https://me.zulnowski.com/:splat 301!
+https://www.lz.zulnowski.com/* https://me.zulnowski.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://me-zulnowski.netlify.com/* https://me.zulnowski.com/:splat 301!
