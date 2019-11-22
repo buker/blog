@@ -6,9 +6,7 @@
 
 {% if layout.common-js %}
   {% for js in layout.common-js %}
-    {% if js contains 'jquery' %}
-      <script src="{{ js | relative_url }}"></script>
-    {% endif %}
+    <script src="{{ js | relative_url }}"></script>
   {% endfor %}
 {% endif %}
 
