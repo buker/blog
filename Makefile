@@ -2,8 +2,11 @@ build: ## Build image for development
 	docker build -t blog .
 
 run: ## Run docker with volume mount
-	docker run --rm -p 4000:4000 --name blog -v $(PWD):/srv/jekyll blog serve
-	
+	docker run --rm -p 4000:4000  --name blog -v $(PWD):/srv/jekyll blog serve
+
+run-prod: ## Run docker with volume mount
+	docker run --rm -p 4000:4000  -e JEKYLL_ENV="production" --name blog -v $(PWD):/srv/jekyll blog serve
+
 build-site: ## Build statics files in docker image, 
 	docker run --rm -p 4000:4000 --name blog -v $(PWD):/srv/jekyll blog build
 
