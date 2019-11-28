@@ -4,7 +4,7 @@ title: AWS Solution Architect Assosiate
 date: 2019-11-28 15:00
 category: cloud
 author: Łukasz Żułnowski
-image: /img/2019-11-09-aws-solution-architect-associate/logo.png
+image: /img/2019-11-28-aws-solution-architect-associate/logo.png
 share-img: /img/2019-11-28-aws-solution-architect-associate/logo.png
 tags: [aws, cloud, trening, certyfikat, nauka, egzamin]
 summary: Jak zdać egzamin z AWS Solution Architect Assosiate
