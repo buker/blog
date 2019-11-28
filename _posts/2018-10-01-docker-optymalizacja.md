@@ -2,6 +2,7 @@
 layout: post
 title: Docker - Optymalizacja obrazu
 image: /img/2018-10-01-docker-optymalizacja/docker-post-1.png
+share-img: /img/2018-10-01-docker-optymalizacja/docker-post-1.png
 tags: [docker, kontenery, linux, how-to, optymalizacja, czyszczenie]
 ---
 
