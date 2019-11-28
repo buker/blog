@@ -92,4 +92,6 @@ Satysfakcje!! A oprócz tego:
 * 50% rabatu na kolejny egzamin Assosiate
 * Dostęp do programu [SME](https://aws.amazon.com/certification/certification-sme-program/)
 * Dostęp do [sklepu](https://www.sunriseidcart.com/aws/) z gadzetami
-* Certyfikat twojego certyfikatu w formie PDF oraz linku.
+* Certyfikat  w formie PDF oraz linku.
+
+Mam nadzieje że informacje, które postarałem się wam przekazać będą przydatne i pomogą wam zdać egzamin jeśli się zdecyzujecie :).
