@@ -1,4 +1,4 @@
----
+--
 layout: post
 title: Własny blog na AWS. Praktycznie za darmo.
 date: 2019-12-09 14:00
@@ -34,17 +34,17 @@ Nie chce tutaj opisywać całego procesu zakładania konta w chmurze AWS. Jest t
 Teraz musisz wygenerować Access i Secret key dla twojego konta. Do tego celu najlepiej stworzyć nowe użytkownika IAM i dopiero jemu dać odpowiednie dostępy. Poniżej zamieszczam instruckje jak to zrobić z powiomu konsoli AWS:
 
 1. Zaloguj się do konsoli pod adresem [https://console.aws.amazon.com/](https://console.aws.amazon.com/).
-   ![AWS konsola](/img/2019-11-16-my-own-blog-on-aws/aws_login.png)
+   ![AWS konsola](/img/2019-12-09-my-own-blog-on-aws/aws_login.png)
 2. W serwisach wybierz [IAM](https://console.aws.amazon.com/iam/home?region=us-east-1#/home)
-3. ![AWS IAM](/img/2019-11-16-my-own-blog-on-aws/aws_services.png)
+3. ![AWS IAM](/img/2019-12-09-my-own-blog-on-aws/aws_services.png)
 4. Przejdz do [użytowników](https://console.aws.amazon.com/iam/home?region=us-east-1#/users) i nacisnij przycisk "Add user".
-   ![AWS konsola](/img/2019-11-16-my-own-blog-on-aws/users.png)
+   ![AWS konsola](/img/2019-12-09-my-own-blog-on-aws/users.png)
 5. Wybierasz dowolną nazwę dla użytkownika. Wymagane jest zaznaczenie "Programmatic access". Ta opcja wygeneruje dla użytkownika Access i Secret key. Klikasz "Next"
-   ![AWS nowy użytkownik](/img/2019-11-16-my-own-blog-on-aws/new_user.png)
+   ![AWS nowy użytkownik](/img/2019-12-09-my-own-blog-on-aws/new_user.png)
 6. Wybierasz Attach existing policies directly i wyszukujesz polise dministratorAccess.
-   ![AWS polisy](/img/2019-11-16-my-own-blog-on-aws/polices.png)
+   ![AWS polisy](/img/2019-12-09-my-own-blog-on-aws/polices.png)
 7. Na następnej stronie dodaj tagi o ile takie potrzebujesz.
-   ![AWS tagi](/img/2019-11-16-my-own-blog-on-aws/tags.png)
+   ![AWS tagi](/img/2019-12-09-my-own-blog-on-aws/tags.png)
 8. Na kolejnej stronie zobaczysz podsumowanie tegp co zostanie stworzone.
 9. Ostatnia strona zawiera niezbędne dla Ciebie informacje, Access i Secret key.
 
@@ -172,7 +172,7 @@ Terraform powinien wyświetlić Ci wszystkie zmiany jakie zostaną wykonane w AW
 terraform apply "infra_plan"
 {% endhighlight %}
 Gdy zmianny zgadzają się z oczekiwanymi, wpisujesz "yes" akceptując zmiany i czekasz aż wykona się. Może to chwilę potrwać z powodu podpisywania certyfikatu. W trakcie wykonywania gdy obiekt route 53 będzie stworzony powinieneś u swojego dostawcy domeny stworzyć odpowiednie wpisy na temat serweró nazw. To na jekie serwery powinna kierować nasza domena wpisami typu NS można znaleść w konfiguracji strefy w [Route 53](https://console.aws.amazon.com/route53/).
-![AWS NS](/img/2019-11-16-my-own-blog-on-aws/ns.png)
+![AWS NS](/img/2019-12-09-my-own-blog-on-aws/ns.png)
 
 {: .box-error}
 **Ważne:** Zastanawiasz się czemu rpoprosiłem żebyś to zrobił w ten sposób. W ten sposób możesz odłożyć samo wdrożenie na później i będziesz miał pewność że to co się wykona na infrastruktórze będzie tym co wcześniej widziałeś.
@@ -268,7 +268,7 @@ Configuration file: /srv/jekyll/_config.yml
   Server running... press ctrl-c to stop.
 {% endhighlight %}
 W tym momencie twoja strona jest dostępna na twojej lokalnej maszynie pod adressem [http://localhost:400](http://localhost:400) i wygląda podobnie do tej poniżej.
-![Jekyll example](/img/2019-11-16-my-own-blog-on-aws/new_site.png)
+![Jekyll example](/img/2019-12-09-my-own-blog-on-aws/new_site.png)
 
 Jeśli chcesz zacząć swoją strone od gotowego projektu wystarczy go umieścić jako katalog w taki sam sposób jak demo_blog. 
 
@@ -286,4 +286,4 @@ Twoja strona zostanie synchronizowana do podanego bucketu. Teraz wystarczy werj�
 
 Dziki kilku krótkim krokom zainsniałeś w internecie :). Zaprezentowane rozwiązanie możemy używać na początku życia strony jak i gdy dziennie ma setki albo tysiące użytkowników dziennie. S3 nie ma limitów na ilość requestów na sekunde, dodatkowo strona jest cachowana po stronie CloudFront co zapewnia znaczne oszczędności przy dużym ruchu na stronie. Jak dzięki temu artykułowi zachęciłem Cię do postawienia własnej strony, podziel się tym w komentarzach. Bardzo chętnie zobacze wasze projekty.
 
-Zachęcam do zapisania się w newsleterze.
+Zachęcam do zapisania się w newsleterze. Mam pewien pomysł na projekt, którym chętnie wykorzystam Newsleter jako źródło danych. Oczywiście tylko dla chętnych :).
