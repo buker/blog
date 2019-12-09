@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Własny blog na AWS praktycznie za darmo.
-date: 2019-10-16 20:08
+title: Własny blog na AWS. Praktycznie za darmo.
+date: 2019-12-09 14:00
 category: cloud
 author: Łukasz Żułnowski
-image: /img2019-11-16-my-own-blog-on-aws/logo.png
-share-image: /img/2019-11-16-my-own-blog-on-aws/logo.png
+image: /img/2019-12-09-my-own-blog-on-aws/logo.png
+share-img: /img/2019-12-09-my-own-blog-on-aws/logo.png
 tags: [aws, cloud, blog, free, hosting, jekyll]
 summary: Jak postawić własnego bloga na platformie AWS.
 series: [Cloud]
