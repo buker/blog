@@ -5,14 +5,17 @@ image: /img/2018-10-15-kubernetes-pierwszy-cluster/kubernetes-logo.png
 tags: [docker, kontenery, kubernetes, okiestracja, vps, linux]
 share-img: /img/2018-10-15-kubernetes-pierwszy-cluster/kubernetes-logo.png
 ---
-Ten artykuł będzie poświęcony temu jak rozpocząć tworzenie klastra kubernetes używając taniego VPSa. Będzie to środowisko, w którym możemy uruchomić nasze projekty, hostować portfolio, czy testować nowe rozwiązania. Artykuł będzie zawierał listę kroków, pozwalającą uruchomić działający klaster z dostępem do niego z poziomu linii komend, jak i interfejsu graficznego. 
+Ten artykuł będzie poświęcony temu jak rozpocząć tworzenie klastra kubernetes używając taniego VPSa. Będzie to środowisko, w którym możemy uruchomić nasze projekty, hostować portfolio, czy testować nowe rozwiązania. Artykuł będzie zawierał listę kroków, pozwalającą uruchomić działający klaster z dostępem do niego z poziomu linii komend, jak i interfejsu graficznego.
 
 ## Przygotowanie
+
 Do stworzenie klastra będziemy potrzebować
+
 * Jeden tani VPS - Ja użyje serwera o 4xCPU, 8GB RAM, 40GB ssd, oczywiście mogą być słabsze.
 
 {: .box-error}
 **Ważne:** VPS musi być w technologi np. KVM. OpenVZ nie nadają się ze względu na współdzielone jądro, co powoduje najczęściej problemy z brakującymi modułami.
+
 * Możliwość instalacji systemu z obrazem Ubuntu
 * Trochę wolnego czasu i dostęp do internetu
 
@@ -28,10 +31,15 @@ apt-get install apt-transport-https ca-certificates curl software-properties-com
 
 Dodajemy klucze gpg do repozytoriów Docker i Kubernetesa:
 
+
+Klucz Docker:
 {% highlight bash linenos %}
-#Klucz Docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#Klucz Kubernetes
+{% endhighlight %}
+
+
+Klucz Kubernetes:
+{% highlight bash linenos %}
 curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 {% endhighlight %}
 
@@ -45,6 +53,7 @@ EOF
 apt-get update
 apt-get install -y docker-ce kubelet kubeadm kubernetes-cni
 {% endhighlight %}
+
 
 Przed dalszym etapem prac zostało nam tylko jedno.
 
@@ -78,7 +87,7 @@ Musimy je skonfigurować. Klaster generuje plik, który wystarczy skopiować do 
 scp user@112.218.178:/etc/kubernetes/admin.conf ~/.kube/config
 {% endhighlight %}
 
-## Master musi być workerem.
+## Master musi być workerem
 
 Standardowo master kubernetesa ma zablokowaną możliwość uruchamiania na nim podów. Jeśli twój klaster to więcej niż jeden serwer to możesz to pominąć.
 Jednak jeśli tak jak ja robisz wszystko na jednym serwerze, to trzeba z poziomu maszyny klient wykonać polecenie:
@@ -112,7 +121,7 @@ daemonset.extensions/weave-net created
 
 Od tej chwili mamy już pełno prawny działający klaster Kubernetes.
 
-## Bo GUI też jest ważne.
+## Bo GUI też jest ważne
 
 Pierwszą rzeczą do zrobienia jest instalacja Dashboardu. Jest to bardzo przydatne i wygodne narzędzie.
 
@@ -121,7 +130,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/s
 {% endhighlight %}
 
 Ostatnia rzecz to stworzenie użytkownika, który będzie miał uprawnienia do używania z tego narzędzia.
-
+<!-- markdownlint-disable -->
 admin-user.yaml
 {% highlight yaml linenos %}
 apiVersion: v1
@@ -144,6 +153,8 @@ name: admin
 namespace: kube-system
 ---
 {% endhighlight %}
+
+<!-- markdownlint-disable -->
 
 {% highlight bash linenos %}
 kubectl create -f admin-user.yaml
